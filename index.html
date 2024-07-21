@@ -15,6 +15,7 @@
         <div class="container">
             <nav class="nav">
                 <a class="logo" href="./index.html">Web<span class="logo-accent">Studio</span></a>
+                
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a class="nav-link active" href="./index.html">Studio</a>
@@ -33,10 +34,15 @@
                     <li class="address-item"><a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+            <button class="menu-btn header-menu-btn" type="button" aria-label="Open mobile menu button">
+                <svg class="btn-menu-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero hide">
             <div class="container">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
                 <button class="btn btn-order" type="button">Order Service</button>
@@ -326,7 +332,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer hide">
         <div class="container">
             
             <div class="footer-start">
@@ -385,7 +391,7 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop hide">
         <div class="modal">
             <button class="modal-btn-close" type="button">
                 <svg class="modal-close-icon" width="8" height="8">
