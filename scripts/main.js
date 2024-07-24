@@ -1,3 +1,13 @@
+const modal = document.querySelector('.backdrop')
+const openModalBtn = document.querySelector('.btn-order')
+const closeModalBtn = document.querySelector('.modal-btn-close')
+const toggleModal = () => {
+  modal.classList.toggle('is-open');
+};
+
+openModalBtn.addEventListener('click', toggleModal);
+closeModalBtn.addEventListener('click', toggleModal)
+
 const mobileMenuRefs = {
   mobileMenu: document.querySelector('.mobile-menu'),
   openMenuBtn: document.querySelector('.open-menu'),
