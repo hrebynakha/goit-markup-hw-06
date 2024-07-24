@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" >
     <link rel="stylesheet" href="./css/styles.css" >
+    <script defer type="module" src="./scripts/main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -34,7 +35,7 @@
                     <li class="address-item"><a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
-            <button class="menu-btn header-menu-btn" type="button" aria-label="Open mobile menu button">
+            <button class="menu-btn header-menu-btn open-menu" type="button" aria-label="Open mobile menu button">
                 <svg class="btn-menu-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-menu"></use>
                 </svg>
@@ -42,13 +43,14 @@
         </div>
     </header>
     <main>
-        <section class="hero hide">
+        <section class="hero">
             <div class="container">
-                <h1 class="hero-title">Effective Solutions for Your Business</h1>
-                <button class="btn btn-order" type="button">Order Service</button>
+                <div class="hero-wrapper">
+                    <h1 class="hero-title">Effective Solutions for Your Business</h1>
+                    <button class="btn btn-order" type="button">Order Service</button>
+                </div>
             </div>
         </section>
-
         <section class="features">
             <div class="container">
                 <h2 class="visually-hidden">Features</h2>
@@ -97,7 +99,12 @@
                 <h2 class="item-title team-title">Our Team</h2>
                 <ul class="team-list card-set">
                     <li class="team-member card-set-item">
-                        <img src="./images/team/img-1.jpg" alt="Team member photo" width="264">
+                        <img 
+                            srcset="./images/team/img-1@1x.jpg 1x, ./images/team/img-1@2x.jpg"
+                            src="./images/team/img-1@1x.jpg"
+                            alt="Team member photo" 
+                            width="264"
+                        >
                         <div class="team-member-title">
                             <h3 class="item-subtitle team-subtitle">Mark Guerrero</h3>
                             <p class="item-text team-text">Product Designer</p>
@@ -135,7 +142,12 @@
                                              
                     </li>
                     <li class="team-member card-set-item">
-                        <img src="./images/team/img-2.jpg" alt="Team member photo" width="264">
+                        <img 
+                            srcset="./images/team/img-2@1x.jpg 1x, ./images/team/img-2@2x.jpg"
+                            src="./images/team/img-2@1x.jpg"
+                            alt="Team member photo"
+                            width="264"
+                        >
                         <div class="team-member-title">
                             <h3 class="item-subtitle team-subtitle">Tom Ford</h3>
                             <p class="item-text team-text">Frontend Developer</p>
@@ -174,7 +186,12 @@
                                                
                     </li>
                     <li class="team-member card-set-item">
-                        <img src="./images/team/img-3.jpg" alt="Team member photo" width="264">
+                        <img 
+                            srcset="./images/team/img-3@1x.jpg 1x, ./images/team/img-3@2x.jpg"
+                            src="./images/team/img-3@1x.jpg"
+                            alt="Team member photo"
+                            width="264"
+                        >
                         <div class="team-member-title">
                             <h3 class="item-subtitle team-subtitle">Camila Garcia</h3>
                             <p class="item-text team-text">Marketing</p>
@@ -212,7 +229,12 @@
                                                
                     </li>
                     <li class="team-member card-set-item">
-                        <img src="./images/team/img-4.jpg" alt="Team member photo" width="264">
+                        <img 
+                            srcset="./images/team/img-4@1x.jpg 1x, ./images/team/img-4@2x.jpg"
+                            src="./images/team/img-4@1x.jpg"
+                            alt="Team member photo"
+                            width="264"
+                        >
                         <div class="team-member-title">
                             <h3 class="item-subtitle team-subtitle">Daniel Wilson</h3>
                             <p class="item-text team-text">UI Designer</p>
@@ -393,7 +415,7 @@
     </footer>
     <div class="backdrop hide">
         <div class="modal">
-            <button class="modal-btn-close" type="button">
+            <button class="btn-close modal-btn-close" type="button">
                 <svg class="modal-close-icon" width="8" height="8">
                     <use href="./images/icons.svg#icon-x-mark"></use>
                 </svg>
@@ -453,11 +475,56 @@
         </div>
     </div>
     <div class="mobile-menu">
-        <button class="close-mobile-menu-btn"></button>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+        <button class="btn-close mobile-menu-close-btn">
+            <svg class="mobile-close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-x-mark"></use>
+            </svg> 
+        </button>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a class="menu-link active" href="./index.html">Studio</a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="">Portfolio</a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="">Contacts</a>
+            </li>
+        </ul>
+     
+        <ul class="mobile-menu-address-list">
+            <li class="mobile-menu-address-item"><a class="mobile-menu-address-link address-active" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li class="mobile-menu-address-item"><a class="mobile-menu-address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+        </ul>
+        <ul class="social-links-list moblie-menu-socials">
+            <li class="social-item">
+                <a class="social-item-link" href="">
+                    <svg class="social-item-link-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a class="social-item-link" href="">
+                    <svg class="social-item-link-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-x"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a class="social-item-link" href="">
+                    <svg class="social-item-link-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a class="social-item-link" href="">
+                    <svg class="social-item-link-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </div>
 </body>
