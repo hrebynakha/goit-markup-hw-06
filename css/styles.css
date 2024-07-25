@@ -711,8 +711,6 @@ footer {
     justify-content: center;
 }
 
-
-
 @media only screen and (min-width: 768px) {
     .team-list {
         --items: 2;
@@ -722,6 +720,7 @@ footer {
         column-gap: 24px;
         row-gap: 64px;
     }
+
     
 }
 
@@ -737,7 +736,8 @@ footer {
         column-gap: 24px;
         row-gap: 64px;
     }
-    
+   
+
 }
 /* #endregion *
 
@@ -1003,9 +1003,6 @@ footer {
         flex-direction: row;
         gap:24px;
     }
-    .social-links-list {
-       justify-content: start;
-    }
     .email-input {
         width: 264px;
     }
@@ -1028,9 +1025,6 @@ footer {
         margin-right: 40px;
     }
 
-    .footer-start, .footer-social, .footer-subscribe {
-        width: auto;
-    }
     .email-input {
         min-width: 264px;
         opacity: 1;
