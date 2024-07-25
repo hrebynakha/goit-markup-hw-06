@@ -1033,6 +1033,7 @@ footer {
     }
     .email-input {
         min-width: 264px;
+        opacity: 1;
     }
     .form-subscribe {
         gap:24px;
